@@ -5,9 +5,10 @@ const path = require('path')
 const expressLayout = require('express-ejs-layouts')
 const PORT = process.env.PORT || 3000
 
-
+// Assets 
+app.use(express.static('public'))
 // Create Server
-app.get("/", (req, res) => {
+app.get('/', (req, res) => {
     res.render('home')
 })
 
